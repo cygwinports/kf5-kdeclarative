@@ -1,0 +1,31 @@
+inherit kf5
+
+NAME="kf5-kdeclarative"
+VERSION=5.10.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 QML integration library"
+DESCRIPTION="KDeclarative provides integration of QML and KDE work spaces.
+It comprises two parts: a library used by the C++ part of your application
+to intergrate QML with KDE Frameworks specific features, and a series of
+QML imports that offer bindings to some of the Frameworks."
+
+PKG_NAMES="libKF5Declarative5 libKF5Declarative-devel"
+libKF5Declarative5_CONTENTS="
+	usr/bin/cygKF5Declarative-5.dll
+	usr/bin/cygKF5QuickAddons-5.dll
+	usr/bin/kpackagelauncherqml.exe
+	${QT5_QMLDIR#/}/org/kde/
+	usr/share/doc/
+	usr/share/locale/
+"
+libKF5Declarative_devel_REQUIRES="libKF5Config-devel libKF5CoreAddons-devel libKF5I18n-devel libKF5IconThemes-devel libKF5KIO-devel libKF5Package-devel libQt5Quick-devel"
+libKF5Declarative_devel_CONTENTS="
+	usr/include/KF5/KDeclarative/
+	usr/include/KF5/kdeclarative_version.h
+	usr/lib/cmake/KF5Declarative/
+	${QT5_MKSPECSDIR#/}/modules/qt_KDeclarative.pri
+	${QT5_MKSPECSDIR#/}/modules/qt_QuickAddons.pri
+	usr/lib/libKF5Declarative.dll.a
+	usr/lib/libKF5QuickAddons.dll.a
+"
