@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-kdeclarative"
-VERSION=5.12.0
+VERSION=5.27.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 QML integration library"
@@ -12,6 +12,7 @@ QML imports that offer bindings to some of the Frameworks."
 
 PKG_NAMES="libKF5Declarative5 libKF5Declarative-devel"
 libKF5Declarative5_CONTENTS="
+	usr/bin/cygKF5CalendarEvents-5.dll
 	usr/bin/cygKF5Declarative-5.dll
 	usr/bin/cygKF5QuickAddons-5.dll
 	usr/bin/kpackagelauncherqml.exe
@@ -26,6 +27,7 @@ libKF5Declarative_devel_CONTENTS="
 	usr/lib/cmake/KF5Declarative/
 	${QT5_MKSPECSDIR#/}/modules/qt_KDeclarative.pri
 	${QT5_MKSPECSDIR#/}/modules/qt_QuickAddons.pri
+	usr/lib/libKF5CalendarEvents.dll.a
 	usr/lib/libKF5Declarative.dll.a
 	usr/lib/libKF5QuickAddons.dll.a
 "
